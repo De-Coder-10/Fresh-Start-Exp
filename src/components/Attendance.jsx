@@ -269,7 +269,10 @@
 // export default Attendance;
 
 
+
 import React, { useState, useEffect } from "react";
+
+import { ScrollArea } from "@/components/ui/scroll-area"; 
 import AttendanceCard from "./AttendanceCard";
 import Navbar from "./Navbar";
 import Navbar2 from '@/components/Navbar2'
@@ -469,6 +472,7 @@ const Attendance = ({
             : null;
 
           return {
+
             name: subjectcode,
             attendance: {
               attended,
@@ -557,7 +561,10 @@ const Attendance = ({
   return (
 
     <div className="text-white font-sans">
-    <div className="text-white font-sans">
+      {/* <Navbar /> */}
+    <div className="text-white font-sans ">
+
+
       <div className="sticky top-14 bg-[#191c20] z-20">
         <div className="flex gap-2 py-2 px-3">
           <Select
@@ -644,6 +651,73 @@ const Attendance = ({
               ))
             )}
           </TabsContent>
+
+
+{/* FDS
+
+
+          <TabsContent value="overview" className="mt-4">
+      <div className="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8 flex flex-col md:flex-row gap-6 border border-gray-700">
+
+        <div className="w-full md:w-1/3 lg:w-1/4 flex-shrink-0">
+          <h3 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-gray-700">
+            Your Subjects
+          </h3>
+          {selectedSem && attendanceData[selectedSem.registration_id]?.error ? (
+            <div className="flex items-center justify-center py-4 text-red-400 text-center bg-gray-700 rounded-md p-4">
+              {attendanceData[selectedSem.registration_id].error}
+            </div>
+          ) : (
+
+              <nav className="space-y-2">
+                {subjects.map((subject) => (
+                  <button
+                    key={subject.name}
+                    onClick={() => setSelectedSubject(subject)}
+                    className={`
+                      w-full text-left py-3 px-4 rounded-lg transition-all duration-200
+                      ${
+                        selectedSubject && selectedSubject.name === subject.name
+                          ? "bg-blue-600 text-white shadow-md"
+                          : "bg-gray-700 text-gray-200 hover:bg-gray-600 hover:text-white"
+                      }
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800
+                    `}
+                  >
+                    <span className="font-medium text-lg block">{subject.name}</span>
+                    <span className="text-sm opacity-80">{subject.code}</span>
+                  </button>
+                ))}
+              </nav>
+            </ScrollArea>
+          )}
+        </div>
+
+
+        <div className="w-full md:w-2/3 lg:w-3/4">
+          <h3 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-gray-700">
+            Attendance Details
+          </h3>
+          {selectedSubject ? (
+            <AttendanceCard
+              subject={selectedSubject} // Pass the selected subject
+              selectedSubject={selectedSubject} // Still pass to highlight if needed within card
+              setSelectedSubject={setSelectedSubject} // Allows internal card actions if designed
+              subjectAttendanceData={subjectAttendanceData}
+              fetchSubjectAttendance={fetchSubjectAttendance}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full min-h-[300px] bg-gray-700 rounded-lg text-gray-400 text-lg font-medium">
+              Select a subject from the left to view details.
+            </div>
+          )}
+        </div>
+      </div>
+    </TabsContent>
+NEW  */}
+
+
+
 
           <TabsContent value="daily">
             <div className="flex flex-col items-center">

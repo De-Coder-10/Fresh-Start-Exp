@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SubjectInfoCard from "./SubjectInfoCard";
-import Navbar2 from "./Navbar2";
+import Navbar2 from "./Navbar2"
 import {
   Select,
   SelectContent,
@@ -60,6 +60,7 @@ export default function Subjects({ w, subjectData, setSubjectData, semestersData
 
     fetchSemesters();
   }, [w, setSubjectData, semestersData, setSemestersData]);
+
 
   const handleSemesterChange = async (value) => {
     setSubjectsLoading(true);

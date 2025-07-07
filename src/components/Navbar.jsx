@@ -34,33 +34,37 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
-    { name: 'Dashboard', path: '/dashboard', icon: GraduationCap, protected: true },
-    { name: 'Academic', path: '/academic-companion', icon: BookOpen, protected: true },
-    { name: 'Mentorship', path: '/mentorship', icon: Users, protected: true },
-    { name: 'Campus Life', path: '/campus-life', icon: Heart, protected: true },
-    { name: 'Career', path: '/career-toolkit', icon: Briefcase, protected: true },
+    { name: 'Dashboard', path: '/Dashboard', icon: GraduationCap },  //protected: true 
+    { name: 'Academic', path: '/AcademicCompanion', icon: BookOpen},
+    { name: 'Mentorship', path: '/MentorshipHub', icon: Users },
+    { name: 'Campus Life', path: '/CampusLife', icon: Heart },
+    { name: 'Career', path: '/CareerToolkit', icon: Briefcase  }
   ];
 
   const filteredNavItems = navItems.filter(item => !item.protected || user);
 
   return (
     // <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+      {/* <div className="max-w-7xl  px-4 sm:px-6 lg:px-8"> */}
+
         
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify items-center h-16">
 
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+            <div className="bg-gradient-to-br from-indigo-500 to-teal-400 p-2 rounded-lg">
               <GraduationCap className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-br from-indigo-500 to-teal-400 bg-clip-text text-transparent">
               FreshStart
             </span>
           </Link>
 
           {/* Desktop Navigation */}
+          {/* <div className="hidden md:flex items-center space-x-8"> */}
           <div className="hidden md:flex items-center space-x-8">
+
             {filteredNavItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -202,7 +206,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    // </nav>
+    //  </nav>
   );
 };
 

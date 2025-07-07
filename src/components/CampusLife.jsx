@@ -32,98 +32,296 @@ const CampusLife = () => {
     { id: 'sports', name: 'Sports & Recreation', icon: Trophy }
   ];
 
-  const clubs = [
-    {
-      id: 1,
-      name: 'Coding Club',
-      category: 'Technical',
-      description: 'Learn programming, participate in hackathons, and build amazing projects together.',
-      members: 150,
-      rating: 4.8,
-      activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
-      meetingTime: 'Every Saturday, 4:00 PM',
-      location: 'Computer Lab 1',
-      icon: Code,
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/20',
-      contact: 'coding.club@college.edu'
-    },
-    {
-      id: 2,
-      name: 'Photography Club',
-      category: 'Creative',
-      description: 'Capture moments, learn photography techniques, and showcase your artistic vision.',
-      members: 85,
-      rating: 4.7,
-      activities: ['Photo Walks', 'Exhibitions', 'Workshops', 'Competitions'],
-      meetingTime: 'Every Sunday, 10:00 AM',
-      location: 'Art Room',
-      icon: Camera,
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-50 dark:bg-purple-900/20',
-      contact: 'photo.club@college.edu'
-    },
-    {
-      id: 3,
-      name: 'Music Society',
-      category: 'Cultural',
-      description: 'Express yourself through music, learn instruments, and perform on stage.',
-      members: 120,
-      rating: 4.9,
-      activities: ['Concerts', 'Music Lessons', 'Band Formation', 'Cultural Events'],
-      meetingTime: 'Every Friday, 6:00 PM',
-      location: 'Auditorium',
-      icon: Music,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-50 dark:bg-green-900/20',
-      contact: 'music.society@college.edu'
-    },
-    {
-      id: 4,
-      name: 'Art & Design Club',
-      category: 'Creative',
-      description: 'Explore various art forms, from traditional painting to digital design.',
-      members: 95,
-      rating: 4.6,
-      activities: ['Art Exhibitions', 'Design Workshops', 'Mural Projects', 'Digital Art'],
-      meetingTime: 'Every Wednesday, 5:00 PM',
-      location: 'Art Studio',
-      icon: Palette,
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50 dark:bg-orange-900/20',
-      contact: 'art.club@college.edu'
-    },
-    {
-      id: 5,
-      name: 'Robotics Club',
-      category: 'Technical',
-      description: 'Build robots, participate in competitions, and explore automation technologies.',
-      members: 75,
-      rating: 4.8,
-      activities: ['Robot Building', 'Competitions', 'Tech Talks', 'Innovation Projects'],
-      meetingTime: 'Every Thursday, 4:30 PM',
-      location: 'Robotics Lab',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      bgColor: 'bg-yellow-50 dark:bg-yellow-900/20',
-      contact: 'robotics.club@college.edu'
-    },
-    {
-      id: 6,
-      name: 'Drama Society',
-      category: 'Cultural',
-      description: 'Act, direct, and produce theatrical performances that inspire and entertain.',
-      members: 110,
-      rating: 4.7,
-      activities: ['Stage Plays', 'Street Plays', 'Acting Workshops', 'Script Writing'],
-      meetingTime: 'Every Tuesday, 6:30 PM',
-      location: 'Drama Room',
-      icon: Users,
-      color: 'from-indigo-500 to-purple-500',
-      bgColor: 'bg-indigo-50 dark:bg-indigo-900/20',
-      contact: 'drama.society@college.edu'
-    }
-  ];
+  // const clubs = [
+  //   {
+  //     id: 1,
+  //     name: 'Knuth',
+  //     category: 'Technical',
+  //     description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+  //     // members: 150,
+  //     // rating: 4.8,
+  //     activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+  //     // meetingTime: 'Every Saturday, 4:00 PM',
+  //     // location: 'Computer Lab 1',
+  //     icon: Code,
+  //     color: 'from-blue-500 to-cyan-500',
+  //     bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+  //     contact: 'coding.club@college.edu'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Photography Club',
+  //     category: 'Creative',
+  //     description: 'Capture moments, learn photography techniques, and showcase your artistic vision.',
+  //     members: 85,
+  //     rating: 4.7,
+  //     activities: ['Photo Walks', 'Exhibitions', 'Workshops', 'Competitions'],
+  //     meetingTime: 'Every Sunday, 10:00 AM',
+  //     location: 'Art Room',
+  //     icon: Camera,
+  //     color: 'from-purple-500 to-pink-500',
+  //     bgColor: 'bg-purple-50 dark:bg-purple-900/20',
+  //     contact: 'photo.club@college.edu'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Music Society',
+  //     category: 'Cultural',
+  //     description: 'Express yourself through music, learn instruments, and perform on stage.',
+  //     members: 120,
+  //     rating: 4.9,
+  //     activities: ['Concerts', 'Music Lessons', 'Band Formation', 'Cultural Events'],
+  //     meetingTime: 'Every Friday, 6:00 PM',
+  //     location: 'Auditorium',
+  //     icon: Music,
+  //     color: 'from-green-500 to-emerald-500',
+  //     bgColor: 'bg-green-50 dark:bg-green-900/20',
+  //     contact: 'music.society@college.edu'
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Art & Design Club',
+  //     category: 'Creative',
+  //     description: 'Explore various art forms, from traditional painting to digital design.',
+  //     members: 95,
+  //     rating: 4.6,
+  //     activities: ['Art Exhibitions', 'Design Workshops', 'Mural Projects', 'Digital Art'],
+  //     meetingTime: 'Every Wednesday, 5:00 PM',
+  //     location: 'Art Studio',
+  //     icon: Palette,
+  //     color: 'from-orange-500 to-red-500',
+  //     bgColor: 'bg-orange-50 dark:bg-orange-900/20',
+  //     contact: 'art.club@college.edu'
+  //   },
+  //   {
+  //     id: 5,
+  //     name: 'Robotics Club',
+  //     category: 'Technical',
+  //     description: 'Build robots, participate in competitions, and explore automation technologies.',
+  //     members: 75,
+  //     rating: 4.8,
+  //     activities: ['Robot Building', 'Competitions', 'Tech Talks', 'Innovation Projects'],
+  //     meetingTime: 'Every Thursday, 4:30 PM',
+  //     location: 'Robotics Lab',
+  //     icon: Zap,
+  //     color: 'from-yellow-500 to-orange-500',
+  //     bgColor: 'bg-yellow-50 dark:bg-yellow-900/20',
+  //     contact: 'robotics.club@college.edu'
+  //   },
+  //   {
+  //     id: 6,
+  //     name: 'Drama Society',
+  //     category: 'Cultural',
+  //     description: 'Act, direct, and produce theatrical performances that inspire and entertain.',
+  //     members: 110,
+  //     rating: 4.7,
+  //     activities: ['Stage Plays', 'Street Plays', 'Acting Workshops', 'Script Writing'],
+  //     meetingTime: 'Every Tuesday, 6:30 PM',
+  //     location: 'Drama Room',
+  //     icon: Users,
+  //     color: 'from-indigo-500 to-purple-500',
+  //     bgColor: 'bg-indigo-50 dark:bg-indigo-900/20',
+  //     contact: 'drama.society@college.edu'
+  //   }
+  // ];
+
+  // ...keep your imports and component state as-is
+
+const clubs = [
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://www.instagram.com/knuth_jiit?igsh=Ym1idGRkY2F1OGk2'
+  },
+  {
+    id: 2,
+    name: 'Photography Club (JPEG)',
+    category: 'Creative',
+    description: 'Capture moments, learn photography techniques, and showcase your artistic vision.',
+    // members: 85,
+    // rating: 4.7,
+    activities: ['Photo Walks', 'Exhibitions', 'Workshops', 'Competitions'],
+    // meetingTime: 'Every Sunday, 10:00 AM',
+    // location: 'Art Room',
+    icon: Camera,
+    color: 'from-purple-500 to-pink-500',
+    bgColor: 'bg-purple-50 dark:bg-purple-900/20',
+    contact: 'photo.club@college.edu',
+    instagram: 'https://www.instagram.com/jaypee.photo.enthusiasts.guild?igsh=MWs1aW5vNWd0dWI0cw=='
+  },
+  {
+    id: 3,
+    name: 'Music Society (Crescendo)',
+    category: 'Cultural',
+    description: 'Express yourself through music, learn instruments, and perform on stage.',
+    // members: 120,
+    // rating: 4.9,
+    activities: ['Concerts', 'Music Lessons', 'Band Formation', 'Cultural Events'],
+    // meetingTime: 'Every Friday, 6:00 PM',
+    // location: 'Auditorium',
+    icon: Music,
+    color: 'from-green-500 to-emerald-500',
+    bgColor: 'bg-green-50 dark:bg-green-900/20',
+    contact: 'music.society@college.edu',
+    instagram: 'https://www.instagram.com/crescendojiit?igsh=OW1nb2NsaDlnb2o2'
+  },
+  {
+    id: 4,
+    name: 'NSS JIIT',
+    category: 'Social Service',
+    description: 'Help the society through various social service initiatives',
+    // members: 95,
+    // rating: 4.6,
+    activities: ['Art Exhibitions', 'Design Workshops', 'Mural Projects', 'Digital Art'],
+    // meetingTime: 'Every Wednesday, 5:00 PM',
+    // location: 'Art Studio',
+    icon: Palette,
+    color: 'from-orange-500 to-red-500',
+    bgColor: 'bg-orange-50 dark:bg-orange-900/20',
+    contact: 'art.club@college.edu',
+    instagram: 'https://instagram.com/art_design_club'
+  },
+  {
+    id: 5,
+    name: 'Robotics Club',
+    category: 'Technical',
+    description: 'Build robots, participate in competitions, and explore automation technologies.',
+    // members: 75,
+    // rating: 4.8,
+    activities: ['Robot Building', 'Competitions', 'Tech Talks', 'Innovation Projects'],
+    // meetingTime: 'Every Thursday, 4:30 PM',
+    // location: 'Robotics Lab',
+    icon: Zap,
+    color: 'from-yellow-500 to-orange-500',
+    bgColor: 'bg-yellow-50 dark:bg-yellow-900/20',
+    contact: 'robotics.club@college.edu',
+    instagram: 'https://instagram.com/robotics_club'
+  },
+  {
+    id: 6,
+    name: 'Drama Society',
+    category: 'Cultural',
+    description: 'Act, direct, and produce theatrical performances that inspire and entertain.',
+    // members: 110,
+    // rating: 4.7,
+    activities: ['Stage Plays', 'Street Plays', 'Acting Workshops', 'Script Writing'],
+    // meetingTime: 'Every Tuesday, 6:30 PM',
+    // location: 'Drama Room',
+    icon: Users,
+    color: 'from-indigo-500 to-purple-500',
+    bgColor: 'bg-indigo-50 dark:bg-indigo-900/20',
+    contact: 'drama.society@college.edu',
+    instagram: 'https://instagram.com/drama_society'
+  },
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+  {
+    id: 1,
+    name: 'Knuth',
+    category: 'Technical',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+];
+
 
   const events = [
     {
@@ -169,7 +367,7 @@ const CampusLife = () => {
       id: 1,
       name: 'Main Cafeteria',
       type: 'Cafeteria',
-      rating: 4.2,
+      // rating: 4.2,
       priceRange: '₹30-80',
       cuisine: ['North Indian', 'South Indian', 'Chinese', 'Continental'],
       specialties: ['Butter Chicken', 'Masala Dosa', 'Fried Rice', 'Sandwiches'],
@@ -181,7 +379,7 @@ const CampusLife = () => {
       id: 2,
       name: 'Coffee Corner',
       type: 'Cafe',
-      rating: 4.6,
+      // rating: 4.6,
       priceRange: '₹20-60',
       cuisine: ['Beverages', 'Snacks', 'Fast Food'],
       specialties: ['Cappuccino', 'Cold Coffee', 'Sandwiches', 'Pastries'],
@@ -193,7 +391,7 @@ const CampusLife = () => {
       id: 3,
       name: 'Hostel Mess',
       type: 'Mess',
-      rating: 3.8,
+      // rating: 3.8,
       priceRange: '₹15-40',
       cuisine: ['Home-style Indian'],
       specialties: ['Dal Rice', 'Roti Sabzi', 'Rajma Chawal', 'Curd Rice'],
@@ -205,7 +403,7 @@ const CampusLife = () => {
       id: 4,
       name: 'Street Food Corner',
       type: 'Food Stall',
-      rating: 4.4,
+      // rating: 4.4,
       priceRange: '₹10-50',
       cuisine: ['Street Food', 'Chaat', 'Snacks'],
       specialties: ['Pani Puri', 'Bhel Puri', 'Samosa', 'Jalebi'],
@@ -404,18 +602,18 @@ const CampusLife = () => {
 
                         <div className="space-y-3 mb-4">
                           <div className="flex items-center justify-between text-sm">
-                            <span className="text-gray-600 dark:text-gray-400">Members:</span>
+                            {/* <span className="text-gray-600 dark:text-gray-400">Members:</span> */}
                             <span className="font-medium text-gray-900 dark:text-white">{club.members}</span>
                           </div>
                           
                           <div className="flex items-center space-x-2 text-sm">
                             <Clock className="h-4 w-4 text-gray-400" />
-                            <span className="text-gray-600 dark:text-gray-400">{club.meetingTime}</span>
+                            {/* <span className="text-gray-600 dark:text-gray-400">{club.meetingTime}</span> */}
                           </div>
                           
                           <div className="flex items-center space-x-2 text-sm">
                             <MapPin className="h-4 w-4 text-gray-400" />
-                            <span className="text-gray-600 dark:text-gray-400">{club.location}</span>
+                            {/* <span className="text-gray-600 dark:text-gray-400">{club.location}</span> */}
                           </div>
                         </div>
 
@@ -440,9 +638,20 @@ const CampusLife = () => {
                           </div>
                         </div>
 
-                        <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white px-4 py-2 rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-200 font-medium">
-                          Join Club
-                        </button>
+<div className="flex gap-3">
+  {/* <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white px-4 py-2 rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-200 font-medium">
+    Join Club
+  </button> */}
+  <a
+    href={club.instagram}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg text-center hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 font-medium"
+  >
+    Visit Instagram
+  </a>
+</div>
+
                       </div>
                     </div>
                   );

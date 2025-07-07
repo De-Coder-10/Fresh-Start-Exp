@@ -419,7 +419,7 @@ function AuthenticatedApp({ w, setIsAuthenticated }) {
         <Route path="/subjects" element={<Subjects w={w} subjectData={subjectData} setSubjectData={setSubjectData} semestersData={subjectSemestersData} setSemestersData={setSubjectSemestersData} selectedSem={selectedSubjectsSem} setSelectedSem={setSelectedSubjectsSem} />} />
         <Route path="/profile" element={<Profile w={w} profileData={profileData} setProfileData={setProfileData} />} />
       </Routes>
-      <Navbar />
+      {/* <Navbar /> */}
     </div>
   );
 }

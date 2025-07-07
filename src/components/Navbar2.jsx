@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+
 const BASE_NAME = 'jportal'
 
 function Navbar2() {
@@ -8,6 +9,8 @@ function Navbar2() {
     { name: '  EXAMS', path: '/Exams', icon: `/${BASE_NAME}/icons/exams.svg` },
     { name: ' SUBJECTS ', path: '/Subjects', icon: `/${BASE_NAME}/icons/subjects1.svg` },
     { name: ' PROFILE ', path: '/Profile', icon: `/${BASE_NAME}/icons/profile.svg` },
+
+
   ];
 
   return (

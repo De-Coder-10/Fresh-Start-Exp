@@ -1,12 +1,6 @@
-
-
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dashboard from './Dashboard';
 import { motion } from 'framer-motion';
-import Navbar from './Navbar';
 import { 
   GraduationCap, 
   BookOpen, 
@@ -29,434 +23,295 @@ const LandingPage = () => {
     {
       icon: GraduationCap,
       title: 'College Essentials',
-      description: 'From timetables to faculty contacts to grading systems',
-      color: 'from-blue-500 to-cyan-500'
+      description: 'Timetables, faculty contacts, and grading systems.',
+      color: 'from-cyan-400 to-blue-500'
     },
     {
       icon: BookOpen,
-      title: 'Study Support',
-      description: 'Notes, video playlists, previous papers, GPA calculator',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Study Tools',
+      description: 'Curated notes, PYQs, and GPA tracker.',
+      color: 'from-pink-400 to-purple-500'
     },
     {
       icon: Users,
       title: 'Mentorship Hub',
-      description: 'Chat with verified seniors from your branch/hostel',
-      color: 'from-green-500 to-emerald-500'
+      description: 'Chat with verified seniors from your branch/hostel.',
+      color: 'from-green-400 to-teal-500'
     },
     {
       icon: MapPin,
-      title: 'Onboarding Guide',
-      description: 'Hostel packing list, document checklist, day-1 tips',
-      color: 'from-orange-500 to-red-500'
+      title: 'College Guide',
+      description: 'Packing lists, hostel tips, and FAQs.',
+      color: 'from-orange-400 to-red-500'
     },
     {
       icon: Heart,
       title: 'Campus Life Decoder',
-      description: 'Explore societies, fests, canteens, and shortcuts to fun',
-      color: 'from-pink-500 to-rose-500'
+      description: 'Explore societies, fests, canteens, and shortcuts to fun.',
+      color: 'from-red-400 to-rose-500'
     },
     {
       icon: Briefcase,
       title: 'Career Kickstart',
-      description: 'First-year coding roadmap, resumes, internships & more',
-      color: 'from-indigo-500 to-purple-500'
+      description: 'First-year coding roadmap, resumes, and internships.',
+      color: 'from-indigo-400 to-purple-500'
     },
     {
       icon: MessageCircle,
       title: 'Anonymous Help',
-      description: 'Talk about stress, confusion, or college blues privately',
-      color: 'from-teal-500 to-cyan-500'
+      description: 'Talk about stress or college blues privately.',
+      color: 'from-teal-400 to-cyan-500'
     },
     {
       icon: Target,
       title: 'Live Updates',
-      description: 'Real-time notifications for events, deadlines, and more',
-      color: 'from-yellow-500 to-orange-500'
+      description: 'Real-time notifications for events and deadlines.',
+      color: 'from-yellow-400 to-amber-500'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Ayushi',
+      name: 'Priya Sharma',
       year: '2nd Year, CSE',
-      quote: 'I wish I had this in my first week — it\'s like having a cool senior in your pocket.',
+      quote: 'I wish I had this in my first week—it\'s like having a cool senior in your pocket. The PYQs and notes were a lifesaver!',
       avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150'
     },
     {
-      name: 'Krishan',
+      name: 'Rohan Verma',
       year: '1st Year, ECE',
-      quote: 'Everything from notes to hostel hacks to coding stuff. Perfect!',
+      quote: 'The mentorship feature is gold. I connected with a senior who helped me choose the right clubs and prepare for my first exams.',
       avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150'
     },
     {
-      name: 'Ananya',
+      name: 'Anika Reddy',
       year: '3rd Year, IT',
-      quote: 'The mentorship feature helped me connect with amazing seniors who guided me through tough times.',
+      quote: 'From hostel hacks to finding the best canteen food, FreshStart made settling in so much easier. Highly recommended!',
       avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150'
     }
   ];
 
   const stats = [
     { number: '10K+', label: 'Students Helped' },
-    { number: '500+', label: 'Mentors Available' },
-    { number: '50+', label: 'Colleges Connected' },
-    { number: '95%', label: 'Success Rate' }
+    { number: '500+', label: 'Verified Mentors' },
+    { number: '50+', label: 'Colleges Onboard' },
+    { number: '1,200+', label: 'Resources Shared' }
   ];
 
   return (
-
-
-    
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-2xl shadow-lg">
-                <GraduationCap className="h-12 w-12 text-white" />
+    <div className="min-h-screen bg-gray-900 text-white font-sans">
+      
+      {/* Background Gradient Grid */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div 
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-gray-900 to-gray-900"
+        ></div>
+      </div>
+      
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="overflow-hidden py-24 lg:py-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <div className="bg-gradient-to-br from-indigo-500 to-teal-400 p-4 rounded-2xl shadow-lg shadow-indigo-500/20">
+                  <GraduationCap className="h-12 w-12 text-white" />
+                </div>
               </div>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-              Welcome to Your{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Engineering Journey 
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              FreshStart is your all-in-one guide to surviving — and thriving — in your first year of engineering college.
-            </p>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-100 mb-6 tracking-tight">
+                Your College Journey,
+                <br />
+                <span className="bg-gradient-to-r from-teal-300 via-blue-400 to-pink-400 bg-clip-text text-transparent">
+                  Perfected.
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                FreshStart is the ultimate toolkit for first-year engineering students. Navigate academics, campus life, and your career path—all from one place.
+              </p>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {[
-                'Academic resources',
-                'Campus survival tips',
-                'Clubs, seniors, career, and more',
-                'Built by students, for students'
-              ].map((item, index) => (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/dashboard"
+                  className="group bg-gradient-to-r from-teal-400 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-teal-500 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-indigo-500/40 transform hover:-translate-y-1"
+                >
+                  <span className="flex items-center justify-center space-x-2">
+                    <span>Get Started - It's Free</span>
+                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+                <a
+                  href="#features"
+                  className="bg-gray-800/80 backdrop-blur-sm text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg border border-gray-700 hover:bg-gray-700/90 hover:border-teal-400 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Explore Features
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-gray-900/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center space-x-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700"
+                  className="text-center"
                 >
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700 dark:text-gray-300 font-medium">{item}</span>
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-300 to-indigo-400 bg-clip-text text-transparent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-400 font-medium tracking-wide">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
 
-
-{/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 p-12 rounded-2xl shadow-2xl"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Own Your First Year?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Get access to all tools, resources, and support from Day 1.
-            </p>
-
-
-            {/* <Link
-              to="/register"
-              className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        {/* Features Section */}
+        <section id="features" className="py-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
             >
-              <span>Start Now — It's Free</span>
-              <ArrowRight className="h-5 w-5" />
-            </Link> */}
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Everything You Need, All In One Place
+              </h2>
+              <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                From day one essentials to long-term career planning, we've got you covered.
+              </p>
+            </motion.div>
 
-
-            
-            
-            <Link to="/Dashboard"
-              className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-
-                <span>Start Now — It's Free</span>
-                 <ArrowRight className="h-5 w-5" />
-              </Link>
-            
-            <p className="text-blue-100 mt-4 text-sm">
-              No ads, no spam. Just genuine help.
-            </p>
-
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-
-
-
-  <Link
-    to="/Login"
-    className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-xl font-semibold text-md hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-md"
-  >
-    <span>Check Attendance</span>
-  </Link>
-
-  <Link
-    to="/CampusLife"
-    className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-3 rounded-xl font-semibold text-md hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-md"
-  >
-    <span>Explore Campus Life</span>
-  </Link>
-</div>
-
-          </motion.div>
-        </div>
-      </section>
-      
-            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/register"
-                className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                <span className="flex items-center justify-center space-x-2">
-                  <span>Get Started</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-              <Link
-                to="#features"
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Explore Features
-              </Link>
-            </div> */}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 dark:text-gray-400 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why FreshStart Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="flex justify-center mb-4">
-              <Zap className="h-12 w-12 text-yellow-500" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-teal-400/50 hover:bg-gray-800 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-indigo-500/20"
+                  >
+                    <div className={`bg-gradient-to-r ${feature.color} p-3 rounded-lg w-fit mb-5 shadow-md group-hover:scale-110 transition-transform`}>
+                      <Icon className="h-7 w-7 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-100 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Why FreshStart?
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Starting college is confusing. We get it. That's why we built FreshStart — to give you a smoother, smarter entry into college life.
-            </p>
-          </motion.div>
+          </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: BookOpen, text: 'Semester-wise study roadmap' },
-              { icon: CheckCircle, text: 'Digital admission checklist' },
-              { icon: Heart, text: 'Mental wellness + peer support' },
-              { icon: Users, text: 'Connect with seniors & mentors' },
-              { icon: Briefcase, text: 'Skill-building + internship paths' },
-              { icon: Award, text: 'Food, fests, friends — we\'ve got it all' }
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
+        {/* Testimonials Section */}
+        <section className="py-24 bg-gray-900/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Loved by Students Like You
+              </h2>
+              <p className="text-lg text-gray-400">
+                Real stories from our growing community.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center space-x-4 p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
+                  className="bg-gray-800/60 p-8 rounded-xl border border-gray-700 flex flex-col"
                 >
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-lg">
-                    <Icon className="h-6 w-6 text-white" />
+                  <div className="flex-grow mb-6">
+                    <p className="text-gray-300 italic text-lg leading-relaxed">
+                      "{testimonial.quote}"
+                    </p>
                   </div>
-                  <span className="text-gray-700 dark:text-gray-300 font-medium">{item.text}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              What You'll Find Inside
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Everything you need to succeed in your engineering journey, all in one place.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:-translate-y-2"
-                >
-                  <div className={`bg-gradient-to-r ${feature.color} p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="h-6 w-6 text-white" />
+                  <div className="flex items-center">
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="h-12 w-12 rounded-full object-cover mr-4 border-2 border-teal-400"
+                    />
+                    <div>
+                      <h4 className="font-bold text-white">{testimonial.name}</h4>
+                      <p className="text-sm text-gray-400">{testimonial.year}</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {feature.description}
-                  </p>
                 </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="flex justify-center mb-4">
-              <Star className="h-12 w-12 text-yellow-500" />
+              ))}
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              What Students Are Saying
-            </h2>
-          </motion.div>
+          </div>
+        </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
-              >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="h-12 w-12 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.year}</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 italic">
-                  "{testimonial.quote}"
+        {/* CTA Section */}
+        <section className="py-24">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="relative p-12 rounded-2xl bg-gradient-to-br from-indigo-600 via-blue-900 to-teal-800 text-center overflow-hidden"
+            >
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-400/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-pink-500/20 rounded-full blur-3xl"></div>
+
+              <div className="relative z-10">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Ace Your First Year?
+                </h2>
+                <p className="text-xl text-gray-300 mb-10">
+                  Get instant access to all tools, resources, and support. No ads, no spam—just genuine help.
                 </p>
-                <div className="flex mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+
+                <Link
+                  to="/dashboard"
+                  className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-200 transition-all duration-300 shadow-2xl hover:shadow-white/20 transform hover:-translate-y-1"
+                >
+                  <span>Start Now — It's Free</span>
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="flex justify-center mb-4">
-              <Shield className="h-12 w-12 text-green-500" />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Built for Freshers. Backed by Experience.
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-              FreshStart is designed in collaboration with:
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              'Engineering seniors across India',
-              'Mentors from IITs & NITs',
-              'Mental health professionals',
-              'Real feedback from 1st-year students'
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
-              >
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-3 rounded-full w-fit mx-auto mb-4">
-                  <CheckCircle className="h-6 w-6 text-white" />
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 font-medium">{item}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      
+        </section>
+      </div>
     </div>
-
-
-
   );
 };
 
