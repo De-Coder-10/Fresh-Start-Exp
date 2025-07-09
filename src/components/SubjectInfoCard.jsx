@@ -1,26 +1,46 @@
-function SubjectInfoCard({ subject }) {
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function SubjectInfoCard({ subject }) {
   return (
-    <div className="flex justify-between items-center py-1 border-b border-gray-700">
-      <div className="flex-1 lg:mb-0 mr-4">
-        <h2 className="text-sm font-semibold max-[390px]:text-xs">{subject.name}</h2>
-        <p className="text-sm lg:text-base max-[390px]:text-xs">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="bg-[#1e1f24] border border-white/10 rounded-2xl shadow-md p-4 backdrop-blur-md hover:border-white/20 hover:shadow-lg transition-all"
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="text-white font-semibold text-base sm:text-lg">
+          {subject.name}
+        </h2>
+        <span className="text-xs bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full font-mono tracking-wide">
           {subject.code}
-          {subject.isAudit && " • Audit"}
-        </p>
-        {subject.components.map((component, idx) => (
-          <p key={idx} className="text-sm lg:text-base max-[390px]:text-xs">
-            {component.type === 'L' && 'Lecture'}
-            {component.type === 'T' && 'Tutorial'}
-            {component.type === 'P' && 'Practical'}
-            : {component.teacher}
-          </p>
+        </span>
+      </div>
+
+      {/* Credits and Audit Label */}
+      <div className="flex items-center justify-between text-sm text-white/70 mb-3">
+        <p>Credits: <span className="font-medium text-white">{subject.credits}</span></p>
+        {subject.isAudit && (
+          <span className="text-xs bg-yellow-400/10 text-yellow-300 px-2 py-0.5 rounded-md">
+            Audit
+          </span>
+        )}
+      </div>
+
+      {/* Components */}
+      <div className="space-y-2">
+        {subject.components.map((component, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-between px-3 py-2 rounded-lg bg-[#2a2d31]/60 border border-white/5 text-sm text-white/80"
+          >
+            <span className="capitalize font-medium">{component.type}</span>
+            <span className="text-right">{component.teacher}</span>
+          </div>
         ))}
       </div>
-      <div className="text-3xl font-bold max-[390px]:text-2xl">
-        {subject.credits.toFixed(1)}
-      </div>
-    </div>
+    </motion.div>
   );
 }
-
-export default SubjectInfoCard;

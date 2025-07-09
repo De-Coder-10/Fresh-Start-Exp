@@ -194,7 +194,7 @@ const clubs = [
   },
   {
     id: 5,
-    name: 'Robotics Club',
+    name: 'uCR(Robotics Club) ',
     category: 'Technical',
     description: 'Build robots, participate in competitions, and explore automation technologies.',
     // members: 75,
@@ -210,7 +210,7 @@ const clubs = [
   },
   {
     id: 6,
-    name: 'Drama Society',
+    name: '(Thespian Circle) Drama Society ',
     category: 'Cultural',
     description: 'Act, direct, and produce theatrical performances that inspire and entertain.',
     // members: 110,
@@ -226,7 +226,23 @@ const clubs = [
   },
   {
     id: 1,
-    name: 'Knuth',
+    name: 'Radiance',
+    category: 'Cultural',
+    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
+    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
+    icon: Code,
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    contact: 'coding.club@college.edu',
+    // members: 150,
+    // rating: 4.8,
+    // meetingTime: 'Every Saturday, 4:00 PM',
+    // location: 'Computer Lab 1',
+    instagram: 'https://instagram.com/knuth_club'
+  },
+  {
+    id: 1,
+    name: 'Parola',
     category: 'Technical',
     description: 'Learn programming, participate in hackathons, and build amazing projects together.',
     activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
@@ -258,23 +274,7 @@ const clubs = [
   },
   {
     id: 1,
-    name: 'Knuth',
-    category: 'Technical',
-    description: 'Learn programming, participate in hackathons, and build amazing projects together.',
-    activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
-    icon: Code,
-    color: 'from-blue-500 to-cyan-500',
-    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
-    contact: 'coding.club@college.edu',
-    // members: 150,
-    // rating: 4.8,
-    // meetingTime: 'Every Saturday, 4:00 PM',
-    // location: 'Computer Lab 1',
-    instagram: 'https://instagram.com/knuth_club'
-  },
-  {
-    id: 1,
-    name: 'Knuth',
+    name: 'Jhankaar-Dance Hub',
     category: 'Technical',
     description: 'Learn programming, participate in hackathons, and build amazing projects together.',
     activities: ['Hackathons', 'Coding Competitions', 'Workshops', 'Project Building'],
@@ -573,12 +573,14 @@ const clubs = [
                           <div className={`bg-gradient-to-r ${club.color} p-3 rounded-lg`}>
                             <Icon className="h-6 w-6 text-white" />
                           </div>
-                          <div className="flex items-center space-x-1">
+
+
+                          {/* <div className="flex items-center space-x-1">
                             <Star className="h-4 w-4 text-yellow-500 fill-current" />
                             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                               {club.rating}
                             </span>
-                          </div>
+                          </div> */}
                         </div>
                         
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">

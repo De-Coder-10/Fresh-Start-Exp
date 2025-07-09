@@ -602,6 +602,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { motion } from 'framer-motion';
+import MessScheduler from './MessScheduler';
+
 import { 
   BookOpen, 
   Users, 
@@ -687,7 +689,15 @@ const Dashboard = () => {
       icon: MapPin,
       color: 'from-orange-500 to-red-500',
       link: '/CollegeEssentials'
-    }
+    },
+
+{
+    title: 'Mess Scheduler',
+    description: 'Today\'s meals and weekly schedule',
+    icon: Calendar,
+    color: 'from-yellow-500 to-amber-500',
+    link: '/MessScheduler'
+}
   ];
 
   const upcomingEvents = [
@@ -850,11 +860,15 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </Link>
+                    
                   );
                 })}
               </div>
+              
             </motion.div>
+            
           </div>
+          
 
           {/* Sidebar Area */}
           <div className="space-y-8">

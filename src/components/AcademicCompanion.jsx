@@ -653,23 +653,177 @@ const syllabusData = {
         { name: 'Mathematics I', link: '#' },
         { name: 'Programming', link: '#' }
       ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
       ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
         { name: 'Circuit Theory', link: '#' }
       ]
     },
     'Semester 2': {
       CSE: [
-        { name: 'Data Structures', link: '#' }
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
       ]
     }
   },
   '2nd': {
     'Semester 3': {
       CSE: [
-        { name: 'DBMS', link: '#' }
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
+      ]
+    },
+    'Semester 4': {
+      CSE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
       ]
     }
-  }
+  },
+  '3rd': {
+    'Semester 5': {
+      CSE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
+      ]
+    },
+    'Semester 6': {
+      CSE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
+      ]
+    }
+  },
+  '4th': {
+    'Semester 7': {
+      CSE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
+      ]
+    },
+    'Semester 8': {
+      CSE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      IT: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECE: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      VLSI: [
+        { name: 'Mathematics I', link: '#' },
+        { name: 'Programming', link: '#' }
+      ],
+      ECC: [
+        { name: 'Circuit Theory', link: '#' }
+      ]
+    }
+  },
+  
 };
 
   const tabs = [

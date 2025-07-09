@@ -333,6 +333,7 @@ import AcademicCompanion from './components/AcademicCompanion';
 import MentorshipHub from './components/MentorshipHub';
 import CareerToolkit from './components/CareerToolkit';
 import MentalHealth from './components/MentalHealth'
+import MessScheduler from './components/MessScheduler'; // adjust the path if needed
 
 import './App.css';
 import { WebPortal, LoginError } from "https://cdn.jsdelivr.net/npm/jsjiit@0.0.20/dist/jsjiit.esm.js";
@@ -438,6 +439,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
+  
   useEffect(() => {
     const username = localStorage.getItem("username");
     const password = localStorage.getItem("password");
@@ -503,6 +506,8 @@ function App() {
             <Route path="/MentorshipHub" element={<MentorshipHub w={w} />} />
             <Route path="/CareerToolkit" element={<CareerToolkit w={w} />} />
             <Route path="/navbar2" element={<Navbar2 w={w} />} />
+            <Route path="/MessScheduler" element={<MessScheduler />} />
+
             
 
             <Route path="*" element={<Navigate to="/" />} />

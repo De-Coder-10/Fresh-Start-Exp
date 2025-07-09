@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import SubjectInfoCard from "./SubjectInfoCard";
-import Navbar2 from "./Navbar2"
+import Navbar2 from "./Navbar2";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 export default function Subjects({ w, subjectData, setSubjectData, semestersData, setSemestersData, selectedSem, setSelectedSem }) {
   const [loading, setLoading] = useState(!semestersData);
@@ -61,7 +61,6 @@ export default function Subjects({ w, subjectData, setSubjectData, semestersData
     fetchSemesters();
   }, [w, setSubjectData, semestersData, setSemestersData]);
 
-
   const handleSemesterChange = async (value) => {
     setSubjectsLoading(true);
     try {
@@ -105,23 +104,27 @@ export default function Subjects({ w, subjectData, setSubjectData, semestersData
   }, {}) || {};
 
   return (
-    <div className="text-white font-sans">
-    <div className="text-white font-sans">
-      <div className="sticky top-14 bg-[#191c20] z-20">
-        <div className="py-2 px-3">
+    <div className="min-h-screen bg-gradient-to-b from-[#1a1c1f] to-[#0f1113] text-white font-sans pb-24">
+      {/* Sticky Header */}
+      <div className="sticky top-14 bg-[#191c20] backdrop-blur-md border-b border-white/10 z-20">
+        <div className="py-4 px-4">
           <Select
             onValueChange={handleSemesterChange}
             value={selectedSem?.registration_id}
             disabled={loading}
           >
-            <SelectTrigger className="bg-[#191c20] text-white border-white">
+            <SelectTrigger className="bg-[#22252b] text-white border border-white/20 rounded-lg hover:border-white/40 transition-colors">
               <SelectValue placeholder={loading ? "Loading semesters..." : "Select semester"}>
                 {selectedSem?.registration_code}
               </SelectValue>
             </SelectTrigger>
-            <SelectContent className="bg-[#191c20] text-white border-white">
+            <SelectContent className="bg-[#1e1f22] border border-white/20 rounded-md text-white">
               {semestersData?.semesters?.map((sem) => (
-                <SelectItem key={sem.registration_id} value={sem.registration_id}>
+                <SelectItem
+                  key={sem.registration_id}
+                  value={sem.registration_id}
+                  className="hover:bg-white/10"
+                >
                   {sem.registration_code}
                 </SelectItem>
               ))}
@@ -130,24 +133,26 @@ export default function Subjects({ w, subjectData, setSubjectData, semestersData
         </div>
       </div>
 
-      <div className="px-3 pb-4">
-        <p className="text-sm lg:text-base">Total Credits: {currentSubjects?.total_credits || 0}</p>
+      {/* Main Content */}
+      <div className="px-4 pt-4 space-y-6">
+        <p className="text-sm lg:text-base text-white/70">
+          Total Credits: <span className="font-medium text-white">{currentSubjects?.total_credits || 0}</span>
+        </p>
 
         {subjectsLoading ? (
-          <div className="flex items-center justify-center py-4 h-[calc(100vh-<header_height>-<navbar_height>)]">
-            Loading subjects...
+          <div className="flex items-center justify-center h-60">
+            <p className="text-white/50 text-sm animate-pulse">Loading subjects...</p>
           </div>
         ) : (
-          <div className="lg:space-y-4">
+          <div className="space-y-4">
             {Object.values(groupedSubjects).map((subject) => (
               <SubjectInfoCard key={subject.code} subject={subject} />
             ))}
           </div>
         )}
       </div>
+
       <Navbar2 />
     </div>
-    </div>
-    
   );
 }
